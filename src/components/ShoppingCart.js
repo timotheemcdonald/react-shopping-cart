@@ -11,7 +11,7 @@ const ShoppingCart = ( )=> {
 		}, 0).toFixed(2);
 	};
 
-	const cart = useContext(CartContext)
+	const {cart, removeItem} = useContext(CartContext)
 
 	return (
 		<div className="shopping-cart">
@@ -23,6 +23,7 @@ const ShoppingCart = ( )=> {
 				<p>Total: ${getCartTotal()}</p>
 				<button>Checkout</button>
 			</div>
+
 		</div>
 	);
 };
